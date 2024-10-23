@@ -60,4 +60,6 @@ class EditProfileForm(FlaskForm):
             if user is not None:
                 raise ValidationError('This email is already associated with an account. Please use a different email.')   
 
-    
+
+class EmptyForm(FlaskForm):
+    submit = SubmitField('Submit')
