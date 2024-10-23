@@ -1,0 +1,78 @@
+2024-10-23 15:28:44,838 ERROR: Exception on /edit_profile [POST] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 91, in edit_profile
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/wtforms/form.py", line 330, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/wtforms/form.py", line 147, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/wtforms/fields/core.py", line 234, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/wtforms/fields/core.py", line 254, in _run_validation_chain
+    validator(form, self)
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/forms.py", line 57, in validate_email
+    if email.data != self.original_email:
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EditProfileForm' object has no attribute 'original_email'. Did you mean: 'original_emai'?
+2024-10-23 15:29:07,370 ERROR: Exception on /edit_profile [POST] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 91, in edit_profile
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/wtforms/form.py", line 330, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/wtforms/form.py", line 147, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/wtforms/fields/core.py", line 234, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/wtforms/fields/core.py", line 254, in _run_validation_chain
+    validator(form, self)
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/forms.py", line 57, in validate_email
+    if email.data != self.original_email:
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EditProfileForm' object has no attribute 'original_email'. Did you mean: 'original_emai'?
+2024-10-23 15:30:32,463 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:43]
+2024-10-23 15:33:22,209 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:43]

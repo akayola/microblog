@@ -1,0 +1,23 @@
+pip install flask
+
+# Replace tab with spaces VS code
+View → Command Palette
+Convert Indentation to Spaces press Enter
+
+#
+export FLASK_APP=microblog.py
+
+# Don't run debug in production
+export FLASK_DEBUG=1
+
+pip install aiosmtpd
+aiosmtpd -n -c aiosmtpd.handlers.Debugging -l localhost:8025
+export MAIL_SERVER=localhost
+export MAIL_PORT=8025
+
+# Setup to use Google email server
+export MAIL_SERVER=smtp.googlemail.com
+export MAIL_PORT=587
+export MAIL_USE_TLS=1
+export MAIL_USERNAME=<your-gmail-username>
+export MAIL_PASSWORD=<your-gmail-password>
