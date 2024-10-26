@@ -100,7 +100,7 @@ class User(UserMixin, db.Model):
             id = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])['reset_password']
         except:
             return
-        return db.session(User, id)
+        return db.session.get(User, id)
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -121,3 +121,4 @@ class Post(db.Model):
 @login.user_loader
 def load_user(id):
     return db.session.get(User, int(id))
+
