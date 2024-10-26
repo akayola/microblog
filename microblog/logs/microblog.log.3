@@ -1,4 +1,20 @@
-2024-10-24 12:52:45,527 ERROR: Exception on /index [GET] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
+2024-10-24 18:20:08,218 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-24 18:48:57,660 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-24 18:51:02,222 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-24 18:51:28,665 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-24 18:51:28,665 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-24 18:51:39,056 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-24 19:17:25,205 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 12:18:32,286 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 13:49:09,330 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 13:49:09,371 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 13:49:09,371 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 14:58:02,715 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 14:58:02,742 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 14:58:02,742 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 16:53:49,616 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 16:57:02,668 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 16:57:08,562 ERROR: Exception on /reset_password_request [GET] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,36 +28,9 @@ Traceback (most recent call last):
   File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 51, in index
-    posts = db.sessions.scalars(current_user.following_post()).all()
-            ^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 1008, in __getattr__
-    raise AttributeError(name)
-AttributeError: sessions. Did you mean: 'session'?
-2024-10-24 12:53:18,313 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:43]
-2024-10-24 12:53:21,335 ERROR: Exception on /user/susan [GET] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
-Traceback (most recent call last):
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 98, in user
-    return render_template('user.html', user=user, posts=posts, form=form)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 210, in reset_password_request
+    return render_template('reset_password_request.html', title='Reset Password', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
     return _render(app, template, context)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -52,21 +41,19 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/user.html", line 1, in top-level template code
-    {% extends 'base.html' %}
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/reset_password_request.html", line 1, in top-level template code
+    {% extends "base.html" %}
   File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/base.html", line 31, in top-level template code
     {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/user.html", line 42, in block 'content'
-    {% include '_post.html' %}
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/reset_password_request.html", line 9, in block 'content'
+    {{ from.email(size=64) }}<br>
     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/_post.html", line 6, in template
-    {{% post.author.username %}}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.TemplateSyntaxError: unexpected '%'
-2024-10-24 12:53:29,490 ERROR: Exception on /index [GET] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 487, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'from' is undefined
+2024-10-25 16:57:08,578 ERROR: Exception on /reset_password_request [GET] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -80,11 +67,48 @@ Traceback (most recent call last):
   File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 51, in index
-    posts = db.session.scalars(current_user.following_post()).all()
-                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'User' object has no attribute 'following_post'. Did you mean: 'following_posts'?
-2024-10-24 12:55:15,222 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:43]
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 210, in reset_password_request
+    return render_template('reset_password_request.html', title='Reset Password', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/reset_password_request.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/templates/reset_password_request.html", line 9, in block 'content'
+    {{ from.email(size=64) }}<br>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 487, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'from' is undefined
+2024-10-25 19:04:35,059 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]
+2024-10-25 19:04:52,345 ERROR: Exception on /reset_password_request [POST] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 205, in reset_password_request
+    sa.select(User).where(User.mail == form.email.data))
+                          ^^^^^^^^^
+AttributeError: type object 'User' has no attribute 'mail'. Did you mean: 'email'?
+2024-10-25 19:06:36,681 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:45]

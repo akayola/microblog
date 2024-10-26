@@ -1,4 +1,7 @@
 pip install flask
+pip install flask-mail
+pip install pyjwt
+pip install python-dotenv
 
 # Replace tab with spaces VS code
 View → Command Palette

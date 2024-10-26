@@ -1,4 +1,4 @@
-2024-10-24 14:30:46,686 ERROR: Exception on /explore [GET] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
+2024-10-25 21:30:02,463 ERROR: Exception on /reset_password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNldF9wYXNzd29yZCI6MSwiZXhwIjoxNzI5OTA2Nzc0Ljc0NjkzODJ9.UJBhq6_QjET45z1UAhyYGgYs7sLbBCWOfczLddNS58A [GET] [in /Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py:838]
 Traceback (most recent call last):
   File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,14 +12,10 @@ Traceback (most recent call last):
   File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 181, in explore
-    per_page=app.cofig['POSTS_PER_PAGE'], error_out=False)
-             ^^^^^^^^^
-AttributeError: 'Flask' object has no attribute 'cofig'. Did you mean: 'config'?
-2024-10-24 14:31:34,694 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:43]
-2024-10-24 14:41:57,922 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:43]
-2024-10-24 14:42:36,588 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:43]
-2024-10-24 14:54:21,022 INFO: Microblog startup [in /Users/anatoliykayola/python/microblog/venv/microblog/app/__init__.py:43]
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/routes.py", line 217, in reset_password
+    user = User.verify_reset_password_token(token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anatoliykayola/python/microblog/venv/microblog/app/models.py", line 103, in verify_reset_password_token
+    return db.session(User, id)
+           ^^^^^^^^^^^^^^^^^^^^
+TypeError: scoped_session.__call__() takes 1 positional argument but 3 were given
