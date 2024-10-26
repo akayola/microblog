@@ -1,7 +1,16 @@
+pip install python-dotenv
 pip install flask
+pip install ipython
+pip install flask-wtf
+pip install flask-sqlalchemy
+pip install flask-migrate
+pip install aiosmtpd
+pip install flask-login
+pip install email-validator
+pip install pydentico
+pip install pydenticon
 pip install flask-mail
 pip install pyjwt
-pip install python-dotenv
 
 # Replace tab with spaces VS code
 View → Command Palette
