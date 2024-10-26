@@ -12,6 +12,7 @@ pip install pydenticon
 pip install flask-mail
 pip install pyjwt
 pip install flask-moment
+pip install flask-babel
 
 # Replace tab with spaces VS code
 View → Command Palette
